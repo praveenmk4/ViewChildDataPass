@@ -1,0 +1,33 @@
+<h3>{{ message }}</h3>
+<app-child-component></app-child-component>
+<h3>Well List</h3>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Source Key</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let well of wellList">
+        <td>{{ well.name }}</td>
+        <td
+          [ngStyle]="{
+            'background-color':
+              well.type === 'rls'
+                ? 'green'
+                : well.type === 'ns'
+                ? 'lightpink'
+                : null
+          }"
+        >
+          {{ well.type }}
+        </td>
+        <td>{{ well.source }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div #srcKey></div>

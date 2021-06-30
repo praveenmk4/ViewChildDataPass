@@ -1,0 +1,38 @@
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Name</span>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="name"
+    placeholder="Username"
+    aria-label="Username"
+    aria-describedby="basic-addon1"
+  />
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Type</span>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Type"
+    aria-label="Type"
+    [(ngModel)]="type"
+    #welllist
+    aria-describedby="basic-addon1"
+  />
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Source Key</span>
+  <input
+    type="number"
+    class="form-control"
+    placeholder="sourceKey"
+    aria-label="SourceKey"
+    aria-describedby="basic-addon1"
+    [(ngModel)]="source"
+  />
+</div>
+
+<div>
+  <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+</div>
